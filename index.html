@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>La Miel Bakery</title>
+  <meta name="description" content="La Miel Bakery — roti & pastry artisan. Jl. Rancamaya 87, Bogor." />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header class="header">
+  <div class="container nav">
+    <a class="brand" href="#">
+      <img src="assets/img/logo.png" alt="La Miel logo" class="logo-img">
+      <div>
+        <h1 class="brand-title">La Miel</h1>
+        <div class="brand-sub">Bakery &amp; Pâtisserie</div>
+      </div>
+    </a>
+    <nav class="main-nav">
+      <a href="#best">Terlaris</a>
+      <a href="#menu">Menu</a>
+      <a href="#testimoni">Testimoni</a>
+      <a href="#kritik-saran">Kritik &amp; Saran</a>
+    </nav>
+    <div class="actions">
+      <button id="openCart" class="cart-btn" aria-label="Buka keranjang">Keranjang <span id="cartCount" class="badge">0</span></button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section id="best" class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <h2 class="hero-title">Rasa yang memikat, seni yang halus.</h2>
+        <p class="hero-lead">La Miel — roti artisan &amp; kue elegan, dipanggang setiap hari. <strong>Jl. Rancamaya 87, Bogor</strong></p>
+        <div class="cta">
+          <a href="#menu" class="btn">Lihat Menu</a>
+          <a href="#kritik-saran" class="btn ghost">Kritik &amp; Saran</a>
+        </div>
+      </div>
+      <div class="slider-wrap">
+        <div class="slider" id="slider"></div>
+        <div class="slider-controls"><button id="prev">‹</button><button id="next">›</button></div>
+        <div id="dots" class="dots"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="menu" class="section">
+    <div class="container">
+      <div class="section-head"><h3>Menu Pilihan</h3><p class="muted">Klik "Tambah" untuk masukkan ke keranjang.</p></div>
+      <div id="productGrid" class="grid products"></div>
+    </div>
+  </section>
+
+  <section id="testimoni" class="testimoni">
+    <div class="container">
+      <h3>Testimoni Pelanggan</h3>
+      <div id="testiList" class="testi-list"></div>
+      <form id="testiForm" class="form">
+        <input name="nama" placeholder="Nama" required/>
+        <select name="rating" required>
+          <option value="5">★★★★★ (5)</option>
+          <option value="4">★★★★☆ (4)</option>
+          <option value="3">★★★☆☆ (3)</option>
+          <option value="2">★★☆☆☆ (2)</option>
+          <option value="1">★☆☆☆☆ (1)</option>
+        </select>
+        <textarea name="pesan" placeholder="Tulis testimoni..." required></textarea>
+        <button class="btn">Kirim Testimoni</button>
+      </form>
+    </div>
+  </section>
+
+  <section id="kritik-saran" class="section">
+    <div class="container">
+      <h3>Kritik &amp; Saran</h3>
+      <form id="feedbackForm" class="form">
+        <input name="nama" placeholder="Nama" required/>
+        <input name="email" placeholder="Email" type="email" required/>
+        <textarea name="pesan" placeholder="Masukan Anda..." required></textarea>
+        <button class="btn">Kirim</button><p id="feedbackInfo" class="muted"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <div class="brand-footer">
+        <img src="assets/img/logo.png" alt="logo" width="46" class="logo-img">
+        <div><strong>La Miel</strong><div class="muted">Jl. Rancamaya 87, Bogor</div></div>
+      </div>
+    </div>
+    <div class="footer-links"><a href="#best">Terlaris</a><a href="#menu">Menu</a><a href="#testimoni">Testimoni</a></div>
+    <div class="footer-cta"><button id="checkoutMain" class="btn">Checkout</button><div class="muted tiny">Keranjang: <span id="footerCount">0</span></div></div>
+  </div>
+  <div class="container tiny muted">© La Miel — All rights reserved</div>
+</footer>
+
+<aside id="cartDrawer" class="cart-drawer" aria-hidden="true">
+  <div class="cart-header"><h4>Keranjang</h4><button id="closeCart">&times;</button></div>
+  <div id="cartItems" class="cart-items"></div>
+  <div class="cart-footer"><div>Total: <strong id="cartTotal">Rp 0</strong></div><button id="checkoutBtn" class="btn wide">Checkout</button></div>
+</aside>
+
+<script src="assets/js/app.js"></script>
+</body>
+</html>
